@@ -1,25 +1,65 @@
 import React from 'react'
 import DuckImage from '../assets/Duck.jpg'
-import './HomeView.scss'
-import {setLoading, alertMessage} from '../../../utils'
+import BaseContainer from '../../../containers/BaseContainer'
+import {Button} from '../../../components/UI'
+import {alertMessage} from '../../../utils'
 
-export const HomeView = () => (
-  <div>
-    <h1 className="page-title"> Home
-    </h1>
-    <img
-      alt='This is a duck, because Redux!'
-      className='duck'
-      src={DuckImage}
-      onClick={_=>{
-        setLoading(true)
-        setTimeout(function () {
-          setLoading(false)
-          alertMessage()
-        }, 1000);
-      }}
-    />
-  </div>
-)
+class HomeView extends BaseContainer {
+  componentWillMount() {
+    this.setState({
+      title: "Home"
+    })
+  }
+
+  _renderContent() {
+    console.log(this.state)
+    return <div className="portlet body">
+      <div className="row">
+        <div className="col-xs-2">
+          <Button onClick={_=>{
+            this.showLoading(true)
+            setTimeout(() => {
+              this.showLoading(false)
+              alertMessage()
+            }, 1000);
+          }}>
+            Show Loading
+          </Button>
+        </div>
+
+        <div className="col-xs-1">
+          <Button
+            type="info"
+            enable={true}
+            icon="bullhorn"
+            block={true}
+            onClick={_=>{
+              this.showDialog({
+                title: "Dialog",
+                data: {
+                  "name" : "TTin"
+                },
+                content: (data) => `My name is ${data.name}, Hello There`,
+                onConfirm: () =>{
+                  alertMessage()
+                }
+              })
+            }}>
+
+          </Button>
+        </div>
+
+      </div>
+
+      <img
+        alt='This is a duck, because Redux!'
+        className='duck'
+        src={DuckImage}
+        onClick={_=>{
+        }}
+      />
+    </div>
+  }
+}
 
 export default HomeView
