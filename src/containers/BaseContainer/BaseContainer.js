@@ -26,13 +26,14 @@ class BaseContainer extends Component {
     subTitle: "",
     breadcrumbs: [],
     loading: false,
-    dialog: false
   }
+
   constructor(props) {
       super(props);
       this.state = Object.assign(this.state,{
         ...this.props
       })
+      console.log(this.state)
   }
 
   render () {
@@ -46,7 +47,7 @@ class BaseContainer extends Component {
         </div>
       </div>
 
-      <ModalForm ref="modalDialog" isShown={this.state.dialog} />
+      <ModalForm ref="modalDialog"/>
 
       { this.state.loading && <div className="modal-backdrop fade in"></div> }
     </div>
@@ -66,9 +67,6 @@ class BaseContainer extends Component {
       data: options.data,
       onConfirm: options.onConfirm
     })
-    this.setState({
-      dialog: true
-    })
   }
 
   //--------------------------------------------------------------------------//
@@ -77,14 +75,16 @@ class BaseContainer extends Component {
   _renderPageBar() {
     const {title, subTitle, breadcrumbs} = this.state
     return <div className="page-bar">
-      <ul className="page-breadcrumb">
-        { breadcrumbs && breadcrumbs.map(itm => (
-          <BreadcrumbItem {...itm} />
-        ))}
-        <li>
-          <span>{title}</span>
-        </li>
-      </ul>
+      { breadcrumbs && breadcrumbs.length > 0 &&
+        <ul className="page-breadcrumb">
+          { breadcrumbs && breadcrumbs.map(itm => (
+            <BreadcrumbItem {...itm} />
+          ))}
+          <li>
+            <span>{title}</span>
+          </li>
+        </ul>
+      }
     </div>
   }
 

@@ -1,5 +1,7 @@
 import Button from './Button'
+import Tab from './Tab'
 
 export {
-  Button
+  Button,
+  Tab
 }

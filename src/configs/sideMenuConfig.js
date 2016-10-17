@@ -5,6 +5,9 @@ export default {
           title: "Home",
           route: "/"
       }, {
+          title: "Tabs",
+          route: "/tabs"
+      }, {
           title: "Counter",
           route: "/counter"
       }]
