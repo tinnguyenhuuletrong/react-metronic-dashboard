@@ -5,7 +5,7 @@ export default {
           title: "Home",
           route: "/"
       }, {
-          title: "Tabs",
+          title: "Tabs & UI Comps",
           route: "/tabs"
       }, {
           title: "Counter",

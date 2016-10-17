@@ -1,19 +1,19 @@
 import React from 'react'
 import BaseContainer from '../../../containers/BaseContainer'
-import {Tab, TextInput} from '../../../components/UI'
+import {Tab, TextInput, CheckBox, RadioGroup} from '../../../components/UI'
 
 const TABS_DATA = [{
-  title: "Tab1",
+  title: "Basic UI Comps",
   render: () => {return <h3> default tab1 </h3>}
 },{
-  title: "Tab2",
+  title: "Form Binding",
   render: () => {return <h3> default tab2 </h3>}
 }]
 
 class TabView extends BaseContainer {
   componentWillMount() {
     this.setState({
-      title: "Tabs",
+      title: "Tab & UI Components",
       name: ""
     })
 
@@ -34,7 +34,7 @@ class TabView extends BaseContainer {
   //  Tab Content Renderer
   //--------------------------------------------------------------------//
   _renderTab1() {
-    const {name} = this.state
+    const {name, gen} = this.state
 
     return <div>
       <h3>My Name Is: {name}</h3>
@@ -65,6 +65,19 @@ class TabView extends BaseContainer {
             multi={true}
             placeHolder="Description"
             helpText= "Input your description here...."
+          />
+        </div>
+
+        <div className="col-sm-2">
+          <CheckBox
+            placeHolder="Is SuperMan"
+          />
+        </div>
+
+        <div className="col-sm-2">
+          <RadioGroup
+            placeHolder="Sex"
+            options={[{title:"Male", value: "male"},{title:"Female", value: "female"}]}
           />
         </div>
       </div>
