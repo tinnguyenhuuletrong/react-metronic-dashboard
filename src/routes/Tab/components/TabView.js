@@ -1,6 +1,6 @@
 import React from 'react'
 import BaseContainer from '../../../containers/BaseContainer'
-import {Tab, TextInput, CheckBox, RadioGroup} from '../../../components/UI'
+import {Tab, TextInput, CheckBox, RadioGroup, Select} from '../../../components/UI'
 
 const TABS_DATA = [{
   title: "Basic UI Comps",
@@ -81,11 +81,30 @@ class TabView extends BaseContainer {
           />
         </div>
       </div>
+      <div className="row">
+        <div className="col-sm-2">
+          <Select
+            placeHolder="Role"
+            value="user"
+            options={[{title:"User", value: "user"},
+              {title:"Supervisor", value: "supervisor"},
+              {title:"Admin", value: "admin"}]} />
+        </div>
+        <div className="col-sm-2">
+          <Select
+            placeHolder="Country"
+            value={["vn"]}
+            multi={true}
+            options={[{title:"VN", value: "vn"},
+              {title:"US", value: "us"},
+              {title:"Singapore", value: "singapore"}]} />
+        </div>
+      </div>
     </div>
   }
 
   _renderTab2() {
-    return <h3>tab 2 content</h3>
+    return <h3>Todo</h3>
   }
 }
 

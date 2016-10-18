@@ -8,6 +8,11 @@ class AppContainer extends Component {
     store  : PropTypes.object.isRequired
   }
 
+  constructor(props) {
+    super(props);
+    // $.fn.select2.defaults.set("theme", "bootstrap");
+  }
+
   shouldComponentUpdate () {
     return false
   }

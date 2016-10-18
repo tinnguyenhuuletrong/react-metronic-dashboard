@@ -2,6 +2,7 @@ import Button from './Button'
 import TextInput from './TextInput'
 import CheckBox from './CheckBox'
 import RadioGroup from './RadioGroup'
+import Select from './Select'
 import Tab from './Tab'
 
 export {
@@ -9,5 +10,6 @@ export {
   Tab,
   TextInput,
   CheckBox,
-  RadioGroup
+  RadioGroup,
+  Select
 }
