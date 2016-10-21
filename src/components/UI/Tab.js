@@ -29,6 +29,11 @@ class TabPanel extends Component {
 */
 class Tab extends Component {
   static propTypes = {
+    
+    // Active index
+    activeIndex: React.PropTypes.number,
+
+    // Tab Data
     tabs: React.PropTypes.arrayOf(React.PropTypes.shape({
        title: React.PropTypes.string,
        render: React.PropTypes.func
@@ -37,6 +42,12 @@ class Tab extends Component {
 
   state = {
     activeIndex: 0
+  }
+
+  componentWillMount() {
+    this.setState({
+      ...this.props
+    })
   }
 
   render() {

@@ -1,6 +1,8 @@
 import React from 'react'
 import BaseContainer from '../../../containers/BaseContainer'
 import {Tab, TextInput, CheckBox, RadioGroup, Select} from '../../../components/UI'
+import DataForm from '../../../components/DataForm'
+import {alertMessage} from '../../../utils'
 
 const TABS_DATA = [{
   title: "Basic UI Comps",
@@ -104,7 +106,64 @@ class TabView extends BaseContainer {
   }
 
   _renderTab2() {
-    return <h3>Todo</h3>
+    const item = {
+      username: "tintatoi",
+      password: "",
+      server: "S1",
+      remember: false
+    }
+
+    return <div>
+      <DataForm
+        title="Data Binding Sample"
+        hasCancel={true}
+        item={item}
+        bodyRender={this.fromBodyRender}
+        onSubmit={itm => {
+          alertMessage({message: JSON.stringify(itm)})
+        }}
+        onCancel={e =>{
+          alert("cancel")
+        }}
+      />
+    </div>
+  }
+
+  fromBodyRender(options) {
+    const {item, binding} = options
+    return <div className="row" >
+      <div className="col-sm-4">
+        <TextInput
+          placeHolder="User Name"
+          helpText= "Input your name here...."
+          {...binding("username")}
+        />
+      </div>
+      <div className="col-sm-4">
+        <TextInput
+          type="password"
+          placeHolder="Password"
+          helpText= "Password here...."
+          {...binding("password")}
+        />
+      </div>
+      <div className="col-sm-8">
+        <Select
+          placeHolder="Server"
+          options={[
+            {title:"Server 1", value: "S1"},
+            {title:"Server 2", value: "S2"},
+            {title:"Server 3", value: "S3"}]}
+          {...binding("server")}
+        />
+      </div>
+      <div className="col-sm-8">
+        <CheckBox
+          placeHolder="Remember"
+          {...binding("remember")}
+        />
+      </div>
+    </div>
   }
 }
 

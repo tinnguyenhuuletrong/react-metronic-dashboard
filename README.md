@@ -18,9 +18,9 @@ Metronic dashboard template base on [React Redux Starter Kit](https://github.com
 - ~~Essential utils Loading, alert Utils~~
 - ~~Base Container for new Page~~
 - ~~Modal Container~~
+- ~~Basic Components (Button, Tab, Input)~~
+- ~~DataForm Components (sync with obj props)~~
 
 ## Todo
-- Basic Components (Button, Tab, Input)
-- Form Components (sync with obj props)
 - Table Components
 - Init Container and Components CLI

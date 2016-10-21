@@ -39,10 +39,10 @@ class CheckBox extends Component {
           disabled={!enable}
           value={value || false}
           onClick={(event) => {
-            this._onChange(event.target.value)
+            this._onChange(event.target.checked)
           }}
         />
-
+        
         <label htmlFor={_id}>
           <span className="inc"></span>
           <span className="check"></span>

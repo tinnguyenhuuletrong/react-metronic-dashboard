@@ -42,8 +42,9 @@ class TextInput extends Component {
     const {type, multi, enable, icon, helpText, placeHolder} = this.props
     const InputTag = multi ? "textarea" : "input"
 
+    //form-md-floating-label
     return <div className={classNames([
-      "form-group form-md-line-input form-md-floating-label",
+      "form-group form-md-line-input",
       error ? "has-error" : ""
     ])}>
       <div className={icon ? "input-icon right" : ''} >
