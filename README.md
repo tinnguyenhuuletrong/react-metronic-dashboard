@@ -11,6 +11,9 @@ Metronic dashboard template base on [React Redux Starter Kit](https://github.com
 ```
   npm install & start
 ```
+## Todo
+- Init Container and Components CLI
+
 ## Done
 - ~~Core layout~~
 - ~~Top Bar~~
@@ -20,7 +23,4 @@ Metronic dashboard template base on [React Redux Starter Kit](https://github.com
 - ~~Modal Container~~
 - ~~Basic Components (Button, Tab, Input)~~
 - ~~DataForm Components (sync with obj props)~~
-
-## Todo
-- Table Components
-- Init Container and Components CLI
+- ~~Table Components~~

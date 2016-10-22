@@ -17,7 +17,15 @@ const FAKE_DATA = [
 
 class TableView extends BaseContainer {
   state={
-    header: ["Username", "Password", "Action"],
+    header: [{
+      title:"Username",
+      prop: "username"
+    }, {
+      title:"Password",
+      prop:"password"
+    }, {
+      title:"Action"
+    }],
     data: FAKE_DATA
   }
 
@@ -31,6 +39,7 @@ class TableView extends BaseContainer {
     console.log(this.state)
     return <div className="portlet body">
       <Table
+        searchableProperties={["username"]}
         hasTopBar={true}
         headers={this.state.header}
         data={this.state.data}
