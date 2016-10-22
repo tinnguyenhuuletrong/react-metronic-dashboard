@@ -8,6 +8,9 @@ export default {
           title: "Tabs & UI Comps",
           route: "/tabs"
       }, {
+          title: "Table",
+          route: "/table"
+      }, {
           title: "Counter",
           route: "/counter"
       }]
