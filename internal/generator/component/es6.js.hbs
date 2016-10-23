@@ -1,0 +1,26 @@
+/**
+*
+* {{ properCase name }} Component
+*
+*/
+
+import {Component} from 'react';
+
+const class {{ properCase name }} extends Component {
+  static propTypes = {
+    dummy: PropTypes.string,
+  }
+
+  render() {
+    const {dummy} = this.props
+    return <div>
+      Content Here For {{ properCase name }} With Default Props {dummy}
+    </div>
+  }
+}
+
+{{ properCase name }}.defaultProps = {
+  dummy: ""
+}
+
+export default {{ properCase name }};

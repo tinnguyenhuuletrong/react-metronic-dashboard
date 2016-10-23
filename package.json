@@ -19,9 +19,13 @@
     "deploy": "better-npm-run deploy",
     "deploy:dev": "better-npm-run deploy:dev",
     "deploy:prod": "better-npm-run deploy:prod",
-    "codecov": "cat coverage/*/lcov.info | codecov"
+    "codecov": "cat coverage/*/lcov.info | codecov",
+    "generate": "better-npm-run generate"
   },
   "betterScripts": {
+    "generate": {
+      "command": "plop --plopfile ./internal/generator/index.js"
+    },
     "compile": {
       "command": "node bin/compile",
       "env": {
@@ -140,6 +144,7 @@
     "mocha": "^3.0.1",
     "nodemon": "^1.10.2",
     "phantomjs-prebuilt": "^2.1.12",
+    "plop": "^1.5.0",
     "react-addons-test-utils": "^15.0.0",
     "redbox-react": "^1.2.10",
     "sinon": "^1.17.5",
