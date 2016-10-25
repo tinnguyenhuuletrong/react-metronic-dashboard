@@ -1,5 +1,5 @@
 import React from 'react'
-import DuckImage from '../assets/Duck.jpg'
+import DuckImage from '../assets/Dragon.jpg'
 import BaseContainer from '../../../containers/BaseContainer'
 import {Button} from '../../../components/UI'
 import {alertMessage} from '../../../utils'

@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react'
-import DefaultAvatar from '../../../static/assets/layouts/layout/img/avatar3_small.jpg'
-
 import HeaderNotification from '../../../components/HeaderNotification'
+
+const DefaultAvatar = "https://avatars3.githubusercontent.com/u/10923944?s=60"
 
 class HeaderAccount extends Component {
   static propTypes = {
@@ -18,16 +18,16 @@ class HeaderAccount extends Component {
   render () {
     const {notifications, notificationClick, logOutClick, account} = this.props
     const avatar = account.avatar || DefaultAvatar
-    const displayName = account.displayName || "Unknow"
+    const displayName = account.displayName || "TinTaToi"
 
     return (
       <div className="top-menu">
         <ul className="nav navbar-nav pull-right">
           <li className="dropdown dropdown-extended dropdown-notification" id="header_notification_bar">
-            <a href="javascript:;" className="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+            { notifications && notifications.length > 0 && <a href="javascript:;" className="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
               <i className="icon-bell"></i>
-              <span className="badge badge-default"> {notifications && notifications.length} </span>
-            </a>
+              <span className="badge badge-default"> { notifications.length} </span>
+            </a> }
             <ul className="dropdown-menu">
               { notifications.map((itm, i) => <HeaderNotification key={i} {...itm}
                 onClick={_=> { notificationClick && notificationClick(itm) }} />)
