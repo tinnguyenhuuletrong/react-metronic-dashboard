@@ -6,9 +6,11 @@
 
 const fs = require('fs');
 const componentGenerator = require('./component/index.js');
+const reducerGenerator = require('./reducer/index.js');
 
 module.exports = (plop) => {
-  plop.setGenerator('component', componentGenerator);
+  plop.setGenerator('Component', componentGenerator);
+  plop.setGenerator('Reducer', reducerGenerator);
   // plop.addHelper('directory', (comp) => {
   //   try {
   //     fs.accessSync(`src/containers/${comp}`, fs.F_OK);

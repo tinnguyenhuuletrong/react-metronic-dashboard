@@ -5,7 +5,7 @@
 const componentExists = require('../utils/componentExists');
 
 module.exports = {
-  description: 'Add an unconnected component',
+  description: 'Add an component',
   prompts: [{
     type: 'list',
     name: 'type',

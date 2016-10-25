@@ -27,7 +27,6 @@ Supporting Types:
   - Routes: (WIP)
 
 ## Todo
-- CLI Tool Generate Reducer & Action
 - CLI Tool Generate Routes `([Empty | BaseView] -> [hasReducer | None])`
 - Add UserInfo Reducer (useGeneralInfo, token, ....)
 - Add Basic CURD Data Model Template
@@ -44,3 +43,4 @@ Supporting Types:
 - ~~Table Components~~
 - ~~CLI Tool Generate Components `([Es6Class | Stateless])`~~
 - ~~Organize Reducers,Actions~~
+- ~~CLI Tool Generate Reducer & Action~~

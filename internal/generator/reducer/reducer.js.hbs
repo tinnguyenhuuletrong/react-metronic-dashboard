@@ -1,0 +1,21 @@
+import { ACTION_{{ constantCase name }} } from '../../actions/{{ lowerCase name }}.js'
+
+// ------------------------------------
+// Action Handlers
+// ------------------------------------
+const ACTION_HANDLERS = {
+  [ACTION_{{ constantCase name }}] : (state, action) => {
+    // Todo: Input Logic here
+    return state
+  }
+}
+
+// ------------------------------------
+// Reducer
+// ------------------------------------
+const initialState = {_v: 0}
+export default function counterReducer (state = initialState, action) {
+  const handler = ACTION_HANDLERS[action.type]
+
+  return handler ? handler(state, action) : state
+}
