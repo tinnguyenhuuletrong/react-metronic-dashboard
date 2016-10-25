@@ -29,10 +29,6 @@ module.exports = {
     message: 'Select the type of container (Standalone, BaseContainer)',
     default: 'BaseContainer',
     choices: () => ['Standalone', 'BaseContainer'],
-  }, {
-    type: 'confirm',
-    name: 'hasStore',
-    message: 'Do you want store binding ?'
   }],
   actions: (data) => {
     // Generate index.js {{properCase name}}.js
