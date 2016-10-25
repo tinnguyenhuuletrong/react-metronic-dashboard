@@ -1,4 +1,4 @@
-import TabView from './components/TabView'
+import TabContainer from './containers/TabContainer'
 
 // Sync route definition
 
@@ -11,7 +11,7 @@ export default (store) => ({
     require.ensure([], (require) => {
 
       /*  Return getComponent   */
-      cb(null, TabView)
+      cb(null, TabContainer)
 
     /* Webpack named bundle   */
   }, 'tabs')

@@ -1,4 +1,4 @@
-import TableView from './components/TableView'
+import TableContainer from './containers/TableContainer'
 
 // Sync route definition
 
@@ -11,7 +11,7 @@ export default (store) => ({
     require.ensure([], (require) => {
 
       /*  Return getComponent   */
-      cb(null, TableView)
+      cb(null, TableContainer)
 
     /* Webpack named bundle   */
   }, 'table')

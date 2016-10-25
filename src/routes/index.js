@@ -12,7 +12,7 @@ import RouteTable from './_routeTable'
 export const createRoutes = (store) => ({
   path        : '/',
   component   : CoreLayout,
-  indexRoute  : Home,
+  indexRoute  : Home(store),
   childRoutes : [
     ...RouteTable.map(itm => itm(store))
   ]

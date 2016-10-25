@@ -1,4 +1,4 @@
-import Counter from './containers/CounterContainer'
+import CounterContainer from './containers/CounterContainer'
 
 export default (store) => ({
   path : 'counter',
@@ -11,7 +11,7 @@ export default (store) => ({
           dependencies for bundling   */
 
       /*  Return getComponent   */
-      cb(null, Counter)
+      cb(null, CounterContainer)
 
     /* Webpack named bundle   */
     }, 'counter')
