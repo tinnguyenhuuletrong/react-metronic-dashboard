@@ -2,9 +2,9 @@
 
 Metronic dashboard template base on [React Redux Starter Kit](https://github.com/davezuko/react-redux-starter-kit)
 
-<img src="doc/imgs/Screenshot1.png" alt="ScreenShot 1" style="width: 400px;"/>
-<img src="doc/imgs/Screenshot2.png" alt="ScreenShot 2" style="width: 200px;"/>
-<img src="doc/imgs/Screenshot3.png" alt="ScreenShot 3" style="width: 200px;"/>
+<img src="doc/imgs/Screenshot1.png" alt="ScreenShot 1" width="400"/>
+<img src="doc/imgs/Screenshot2.png" alt="ScreenShot 2" width="200"/>
+<img src="doc/imgs/Screenshot3.png" alt="ScreenShot 3" width="200"/>
 
 
 ## Installation
@@ -16,10 +16,21 @@ Metronic dashboard template base on [React Redux Starter Kit](https://github.com
 ```
   npm install & start
 ```
+## Source Generator
+```
+  npm generate
+```
+
+Supporting Types:
+  - Components: Generate new Components `[Es6Class | Stateless]`
+  - Reducer & Action: (WIP)
+  - Routes: (WIP)
+
 ## Todo
-- Init Container and Components CLI
+- CLI Tool Generate Reducer & Action
+- CLI Tool Generate Routes `([Empty | BaseView] -> [hasReducer | None])`
 - Add UserInfo Reducer (useGeneralInfo, token, ....)
-- Add Basic CURD Data Model Template 
+- Add Basic CURD Data Model Template
 
 ## Done
 - ~~Core layout~~
@@ -31,4 +42,5 @@ Metronic dashboard template base on [React Redux Starter Kit](https://github.com
 - ~~Basic Components (Button, Tab, Input)~~
 - ~~DataForm Components (sync with obj props)~~
 - ~~Table Components~~
+- ~~CLI Tool Generate Components `([Es6Class | Stateless])`~~
 - ~~Organize Reducers,Actions~~
