@@ -1,0 +1,29 @@
+import React, { PropTypes } from 'react'
+import classNames  from 'classnames';
+import BaseContainer from '../../../containers/BaseContainer'
+
+class {{ properCase name }}View extends BaseContainer {
+  static propTypes = {
+    dummyProps: React.PropTypes.string
+  }
+
+  componentWillMount() {
+    this.setState({
+      title: "{{ properCase name }}Container Page Title"
+    })
+  }
+
+  _renderContent() {
+    const {dummyProps} = this.props
+    return <div className="portlet body">
+      <h3>Page content here: {dummyProps}</h3>
+    </div>
+  }
+}
+
+// Default Props
+{{ properCase name }}View.defaultProps = {
+
+}
+
+export default {{ properCase name }}View

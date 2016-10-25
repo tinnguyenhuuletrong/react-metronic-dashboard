@@ -1,0 +1,22 @@
+import React, { Component, PropTypes } from 'react'
+import classNames  from 'classnames';
+
+class {{ properCase name }}View extends Component {
+  static propTypes = {
+    dummyProps: React.PropTypes.string
+  }
+
+  render() {
+    const {dummyProps} = this.props
+    return <div className="portlet body">
+      <h3>Page content here: {dummyProps}</h3>
+    </div>
+  }
+}
+
+// Default Props
+{{ properCase name }}View.defaultProps = {
+
+}
+
+export default {{ properCase name }}View

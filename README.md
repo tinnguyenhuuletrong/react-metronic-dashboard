@@ -23,11 +23,11 @@ Metronic dashboard template base on [React Redux Starter Kit](https://github.com
 
 Supporting Types:
   - Components: Generate new Components `[Es6Class | Stateless]`
-  - Reducer & Action: (WIP)
+  - Reducer & Action: Generate reducer and action with name
   - Routes: (WIP)
 
 ## Todo
-- CLI Tool Generate Routes `([Empty | BaseView] -> [hasReducer | None])`
+- CLI Tool Generate Routes `([Path] -> [Simple | BaseContainer] -> [hasReducer?])`
 - Add UserInfo Reducer (useGeneralInfo, token, ....)
 - Add Basic CURD Data Model Template
 

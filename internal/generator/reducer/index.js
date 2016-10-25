@@ -34,13 +34,13 @@ module.exports = {
     }, {
       type: 'modify',
       path: '../../src/reducers/index.js',
-      pattern: /export default {/g,
-      template: '$&\r\n  {{ camelCase name}} : {{ properCase name }},',
+      pattern: /\/\/{append_module_here}/g,
+      template: '{{ camelCase name}} : {{ properCase name }},\r\n  $&',
       abortOnFail: true,
     }, {
       type: 'modify',
       path: '../../src/reducers/index.js',
-      pattern: /import/g,
+      pattern: /\/\/{append_include_here}/g,
       template: 'import {{ properCase name}} from \'./{{ lowerCase name}}\'\r\n$&',
       abortOnFail: true,
     }];
