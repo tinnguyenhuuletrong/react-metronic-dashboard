@@ -10,8 +10,8 @@ class HeaderNotification extends Component {
         {content}
       </h3>
       <a onClick={itm=> {
-          onClick && onClick()
-        }}>
+        onClick && onClick()
+      }}>
         go
       </a>
     </li>

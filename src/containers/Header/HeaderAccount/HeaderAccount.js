@@ -5,9 +5,8 @@ const DefaultAvatar = "https://avatars3.githubusercontent.com/u/10923944?s=60"
 
 class HeaderAccount extends Component {
   static propTypes = {
-    notifications : PropTypes.array,
     notificationClick: PropTypes.func,
-    account: PropTypes.object,
+    generalInfo: PropTypes.object,
     logOutClick: PropTypes.func
   }
 
@@ -16,9 +15,10 @@ class HeaderAccount extends Component {
   }
 
   render () {
-    const {notifications, notificationClick, logOutClick, account} = this.props
-    const avatar = account.avatar || DefaultAvatar
-    const displayName = account.displayName || "TinTaToi"
+    const {notificationClick, logOutClick, generalInfo} = this.props
+    const notifications = generalInfo.notifications || []
+    const avatar = generalInfo.avatar || DefaultAvatar
+    const displayName = generalInfo.displayName || "TinTaToi"
 
     return (
       <div className="top-menu">
@@ -64,8 +64,7 @@ class HeaderAccount extends Component {
 }
 
 HeaderAccount.defaultProps = {
-  notifications : [],
-  account: {},
+  generalInfo: {},
   notificationClick : (itm) => {console.log("goto notify logout", itm)},
   logOutClick : () => {console.log("logout")}
 }

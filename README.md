@@ -27,7 +27,6 @@ Supporting Types:
   - **Routes**: Generate Routes `([Path] -> [Simple | BaseContainer])`
 
 ## Todo
-- Add UserInfo Reducer (useGeneralInfo, token, ....)
 - Add Basic CURD Data Model Template
 
 ## Done
@@ -44,3 +43,4 @@ Supporting Types:
 - ~~Organize Reducers,Actions~~
 - ~~CLI Tool Generate Reducer & Action~~
 - ~~CLI Tool Generate Routes `([Path] -> [Simple | BaseContainer])`~~
+- ~~Add Login Page & generalInfo Reducer (displayName, token, avatar....)~~

@@ -1,3 +1,4 @@
+import { connect } from 'react-redux'
 import React, { Component, PropTypes } from 'react'
 import Logo from '../../components/Logo'
 import HeaderAccount from './HeaderAccount'
@@ -19,4 +20,15 @@ class Header extends Component {
   }
 }
 
-export default Header
+const mapDispatchToProps = (dispatch) => ({
+  notificationClick: () => {},
+  logOutClick: () => {},
+  dispatch
+})
+
+const mapStateToProps = (state) => ({
+  generalInfo : state.generalInfo
+})
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(Header)

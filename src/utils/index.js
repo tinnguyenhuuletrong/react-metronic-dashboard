@@ -13,7 +13,12 @@ const DEFAULT_ALERT_ICON_MAP = {
   "success": "check",
   "warning": "warning",
   "danger": "exclamation",
+  "error": "exclamation",
   "info": "user"
+}
+
+const ALERT_TYPE_CORRECT = {
+  "error": "danger",
 }
 
 // type: ["success", "warning", "danger", "info"]
@@ -24,7 +29,12 @@ export const alertMessage = (options={}) => {
     message: "message",
     closeInSeconds: 5
   }
-  defaultOptions.icon = DEFAULT_ALERT_ICON_MAP[defaultOptions.type]
+
+  // auto correct type
+  if(ALERT_TYPE_CORRECT[options.type] != null)
+    options.type = ALERT_TYPE_CORRECT[options.type]
+
+  options.icon = DEFAULT_ALERT_ICON_MAP[options.type]
 
   App.alert(Object.assign(defaultOptions, options))
 }
