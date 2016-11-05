@@ -7,14 +7,21 @@ import RouteTable from './_routeTable'
     PlainRoute objects to build route definitions.
 
     https://github.com/ReactTraining/react-router/blob/master/docs/guides/RouteConfiguration.md
+
+    Note: __BASENAME__ is base path setting up for case relative directory like /abc/<route>
 */
 
 export const createRoutes = (store) => ({
-  path        : '/',
-  component   : CoreLayout,
-  indexRoute  : Home(store),
-  childRoutes : [
-    ...RouteTable.map(itm => itm(store))
+  path: __BASENAME__ + '/',
+  component: CoreLayout,
+  indexRoute: Home(store),
+  childRoutes: [
+    ...RouteTable.map(itm => {
+      const tmp = itm(store)
+      if (tmp.path)
+        tmp.path = __BASENAME__ + tmp.path
+      return tmp
+    })
   ]
 })
 

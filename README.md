@@ -26,6 +26,23 @@ Supporting Types:
   - **Reducer & Action**: Generate reducer and action with name
   - **Routes**: Generate Routes `([Path] -> [Simple | BaseContainer])`
 
+## How to change Route basePath
+
+- add key **BASENAME** key into env in **package.json** Example:
+''' json
+	"deploy:prod": {
+      "command": "npm run deploy",
+      "env": {
+        "NODE_ENV": "production",
+        "DEBUG": "app:*",
+        "BASENAME": "/abc"
+      }
+    }
+'''
+
+- change **compiler_public_path** in **config/enviroments.js**
+
+
 ## Todo
 - Add Basic CURD Data Model Template
 
